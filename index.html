@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Local Post — One video, every platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#"><span class="brand-icon">◉</span><span>local<span class="brand-light">post</span></span></a>
+    <div class="workspace"><span class="avatar">A</span><span><b>Arvind’s workspace</b><small>Creator plan</small></span><span class="chevron">⌄</span></div>
+    <nav>
+      <p class="nav-label">WORKSPACE</p>
+      <a class="nav-item active" href="#"><span>✳</span> Create post <kbd>⌘ N</kbd></a>
+      <a class="nav-item" href="#"><span>▦</span> Content library</a>
+      <a class="nav-item" href="#"><span>▣</span> Calendar <span class="badge">3</span></a>
+      <p class="nav-label second">MANAGE</p>
+      <a class="nav-item" href="#"><span>◎</span> Connected channels</a>
+      <a class="nav-item" href="#"><span>◷</span> Post history</a>
+    </nav>
+    <div class="sidebar-bottom"><div class="help-card"><span class="help-icon">✦</span><b>Make every post count</b><p>One video, shaped for each audience.</p><a href="#">See how it works <span>↗</span></a></div><div class="profile"><span class="avatar">A</span><span><b>Arvind David</b><small>Settings & account</small></span><span class="dots">···</span></div></div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="crumb">Create post <span>/</span> <b>New post</b></div><div class="top-actions"><button class="icon-button" aria-label="Help">?</button><button class="icon-button" aria-label="Notifications">♧<i></i></button><span class="avatar small">A</span></div></header>
+    <div class="page-wrap">
+      <div class="page-heading"><div><div class="eyebrow">CONTENT STUDIO</div><h1>One video. Every platform.</h1><p>Upload once, then tailor the words and tags to fit each channel.</p></div><button class="text-button">Save as draft</button></div>
+      <div class="stepbar"><div class="step done"><span>✓</span> Add your video</div><div class="step-line"></div><div class="step current"><span>2</span> Tailor your posts</div><div class="step-line"></div><div class="step"><span>3</span> Review & publish</div></div>
+      <section class="video-card"><div class="video-thumb"><div class="play">▶</div><span class="duration">00:24</span><div class="video-art"><span>YOUR VIDEO</span></div></div><div class="video-info"><div class="video-title-row"><div><div class="section-kicker">VIDEO SOURCE</div><h2>Sunday market haul.mp4</h2></div><button class="more">···</button></div><div class="file-meta"><span>↗</span> 1080 × 1920 <i>•</i> 24 sec <i>•</i> 18.4 MB</div><div class="video-bottom"><span class="ready"><b></b> Video ready</span><button class="replace">Replace video</button></div></div><div class="video-tip"><span>✦</span><div><b>Your video stays the same</b><p>We’ll customize the caption, description and tags for each platform.</p></div></div></section>
+      <div class="section-head"><div><h2>Make it fit each platform</h2><p>Choose where to post, then fine-tune the copy for each audience.</p></div><button class="add-channel">＋ Add channel</button></div>
+      <div class="platform-tabs" id="platformTabs"></div>
+      <section class="editor-layout"><div class="editor-card"><div class="editor-top"><div><div class="platform-title" id="platformTitle"></div><p id="platformHint"></p></div><button class="ai-button" id="suggestBtn"><span>✦</span> Suggest copy</button></div><div class="field-group"><div class="field-label"><label for="caption">Caption</label><span id="captionCount"></span></div><textarea id="caption" rows="3" placeholder="Write a caption for this video..."></textarea><div class="field-helper" id="captionHelp"></div></div><div class="field-group"><div class="field-label"><label for="description">Description</label><span id="descriptionCount"></span></div><textarea id="description" rows="3" placeholder="Add more context for this platform..."></textarea><div class="field-helper" id="descriptionHelp"></div></div><div class="field-group tags-group"><div class="field-label"><label>Hashtags</label><span id="tagCount"></span></div><div class="tag-box" id="tagBox"><input id="tagInput" placeholder="Type a hashtag and press Enter" /></div><div class="field-helper">Add tags that make sense for this audience. Press Enter after each one.</div></div><div class="editor-footer"><span class="autosave"><span>✓</span> Saved just now</span><button class="copy-button" id="copyBtn">▢ Copy post</button></div></div>
+        <aside class="preview-card"><div class="preview-heading"><div><span class="section-kicker">LIVE PREVIEW</span><b id="previewPlatform"></b></div><button class="preview-menu">···</button></div><div class="social-preview"><div class="social-head"><span class="avatar social-avatar">A</span><span><b>arvind.david</b><small id="socialPlatformName"></small></span><span class="follow">•••</span></div><div class="preview-video"><div class="video-art large"><span>YOUR VIDEO</span></div><div class="play">▶</div><span class="duration">00:24</span></div><div class="preview-actions"><b>♡</b><b>♧</b><b>➤</b><span>▱</span></div><div class="preview-copy"><b>arvind.david</b> <span id="previewCaption"></span><p class="preview-tags" id="previewTags"></p><div class="preview-description" id="previewDescription"></div><small>JUST NOW</small></div></div><div class="preview-note"><span>ⓘ</span> Preview is an approximation. Final layout may vary by app.</div></aside></section>
+      <div class="bottom-bar"><button class="back-button">← Back</button><div><button class="schedule-button">◷ &nbsp; Schedule</button><button class="next-button" id="nextBtn">Review posts <span>→</span></button></div></div>
+    </div>
+  </main>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
